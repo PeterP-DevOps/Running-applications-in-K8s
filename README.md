@@ -45,3 +45,17 @@ Service и подключение двух реплик. Создан Service т
 ![скриншот](pic/7.png)
 
 ![скриншот](pic/8.png)
+
+Запуск Nginx после создания Service. Init Container на базе BusyBox проверяет доступность DNS-имени Service. После его обнаружения Init Container завершается, и Kubernetes запускает основной контейнер Nginx.
+
+![скриншот](pic/9.png)
+
+![скриншот](pic/10.png)
+
+![скриншот](pic/11.png)
+
+Из тестового Pod multitool-test выполнен HTTP-запрос к Service nginx-init. Ответ 200 OK подтверждает доступность приложения внутри кластера Kubernetes.
+
+![скриншот](pic/12.png)
+
+
